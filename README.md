@@ -15,7 +15,7 @@ THIS SOFTWARE CONTAIN:
  [7] remove
  [8] purge
  
-All of them are in apt-get functions
+All of them are apt-get functions
 
 ##############################
 
@@ -58,7 +58,7 @@ ESSE SOFTWARE CONTEM:
  [7] remove
  [8] purge
  
-Todos so funções da apt-get
+Todas são funções da apt-get
 
 ##############################
 
