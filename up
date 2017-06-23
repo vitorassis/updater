@@ -50,7 +50,7 @@ while [ $ret -eq 1 ]
 				echo -e "            *                                                 *"
 				echo -e "            *         $yellow por Vitor Assis Camargo em 2017$red        *"
 				echo -e " $red[0]$yellow SAIR   $red***************************************************"
-				echo -e " $red[1]$white (update)Atualizar lista de pacotes"
+				echo -e " $red[1]$white (update) Atualizar lista de pacotes"
 				echo -e " $red[2]$white (upgrade) Atualizar programas instalados"
 				echo -e " $red[3]$white (autoremove) Desinstalar pacotes desnecessários"
 				echo -e " $red[4]$white (autoclean) Apagar instaladores de pacotes"
