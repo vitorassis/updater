@@ -22,7 +22,7 @@ ex=0
 op=$1
 ret=1
 
-if [ $op != "1" ] && [ $op != "2" ] && [ $op != "3" ] && [ $op != "4" ] && [ $op != "5" ] && [ $op != "6" ] && [ $op != "7" ]
+if [ $op != "1" ] && [ $op != "2" ] && [ $op != "3" ] && [ $op != "4" ] && [ $op != "5" ] && [ $op != "6" ] && [ $op != "7" ] && [ $op != "8" ]
 	then
 		exit
 fi		
@@ -57,6 +57,7 @@ while [ $ret -eq 1 ]
 				echo -e " $red[5]$white (-S) Instalar pacotes"
 				echo -e " $red[6]$white (-R) Remover pacotes"
 				echo -e " $red[7]$white (-Rscn) Remover pacotes por completo "	
+				echo -e " $red[8]$white (-Rsn $(pacman -Qqdt)) Remover pacotes órfãos"
 				echo 
 				echo -ne "   $green#>$white "
 		fi		
@@ -101,6 +102,10 @@ while [ $ret -eq 1 ]
 						val="-Rscn"
 						v=0
 					;;
+					"8")
+						val="-Rsn $(pacman -Qqdt)"
+						v=0
+					;;	
 					"0")
 						exit
 					;;
