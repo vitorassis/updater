@@ -104,7 +104,7 @@ while [ $ret -eq 1 ]
 					;;
 					"8")
 						val="purge"
-						v=0																															
+						v=0
 					;;
 					"0")
 						exit
@@ -114,7 +114,7 @@ while [ $ret -eq 1 ]
 					then
 						if [ $op = "6" ] || [ $op = "7" ] || [ $op = "8" ]
 							then
-								echo -ne " $red     pacote:$white " 
+								echo -ne " $red     pacote:$white "
 								read pkt
 								sudo apt $val $pkt
 							else
@@ -126,14 +126,20 @@ while [ $ret -eq 1 ]
 							else
 								str="Falhou! Verifique sua rede"
 						fi
-						echo 
+						echo
 						echo
 						echo -ne "$green $str $blue"
+						if [ $# -eq 1 ]
+							then
+								read
+								clear
+								exit
+						fi
 						echo -e " (Pressione <Enter> para retornar ao menu)$white"
 						read
 						ret=1
 				fi
-			fi			
+			fi
 	done
 clear
 exit
