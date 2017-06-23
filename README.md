@@ -13,7 +13,8 @@ THIS SOFTWARE CONTAIN:
  [5] dist-upgrade
  [6] install
  [7] remove
-
+ [8] purge
+ 
 All of them are in apt-get functions
 
 ##############################
