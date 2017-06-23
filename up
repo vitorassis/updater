@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Programa para gerência de atualizações!
+#Todos podem editar esse programa, desde que o desenvolvedor original seja creditado
 
 #1- update
 #2- upgrade
