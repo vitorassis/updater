@@ -48,7 +48,7 @@ while [ $ret -eq 1 ]
 				echo -e "            *$blue|@@@@@@@@@@@@@@@@@@@@|      |@@@@@@|             $red*"
 				echo -e "            *$blue|@@@@@@@@@@@@@@@@@@@@|      |@@@@@@|             $red*"
 				echo -e "            *                                                 *"
-				echo -e "            *          $yellow Vitor Assis Camargo @ 2017  $red          *"
+				echo -e "            *         $yellow por Vitor Assis Camargo em 2017$red        *"
 				echo -e " $red[0]$yellow SAIR   $red***************************************************"
 				echo -e " $red[1]$white (update)Atualizar lista de pacotes"
 				echo -e " $red[2]$white (upgrade) Atualizar programas instalados"
