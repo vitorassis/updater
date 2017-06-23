@@ -1,4 +1,4 @@
-# updater-2.1
+# updater-2.2
 Auxiliar system updater
 Created by Vitor Assis Camargo
 
