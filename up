@@ -9,6 +9,7 @@
 #5- dist-upgrade
 #6- install
 #7- remove
+#8- purge
 
 blue="\033[1;34m"
 white="\033[1;37m"
@@ -20,7 +21,7 @@ ex=0
 op=$1
 ret=1
 
-if [ $op != "1" ] && [ $op != "2" ] && [ $op != "3" ] && [ $op != "4" ] && [ $op != "5" ] && [ $op != "6" ] && [ $op != "7" ]
+if [ $op != "1" ] && [ $op != "2" ] && [ $op != "3" ] && [ $op != "4" ] && [ $op != "5" ] && [ $op != "6" ] && [ $op != "7" ] && [ $op != "8" ]
 	then
 		exit
 fi		
@@ -47,14 +48,15 @@ while [ $ret -eq 1 ]
 				echo -e "            *$blue|@@@@@@@@@@@@@@@@@@@@|      |@@@@@@|             $red*"
 				echo -e "            *                                                 *"
 				echo -e "            *          $yellow Vitor Assis Camargo @ 2017  $red          *"
-				echo -e " $red[0]$yellow EXIT   $red***************************************************"
-				echo -e " $red[1]$white update"
-				echo -e " $red[2]$white upgrade"
-				echo -e " $red[3]$white autoremove"
-				echo -e " $red[4]$white autoclean"
-				echo -e " $red[5]$white dist-upgrade"
-				echo -e " $red[6]$white install"
-				echo -e " $red[7]$white remove"
+				echo -e " $red[0]$yellow SAIR   $red***************************************************"
+				echo -e " $red[1]$white Atualizar lista de pacotes"
+				echo -e " $red[2]$white Atualizar programas instalados"
+				echo -e " $red[3]$white Desinstalar pacotes desnecessários"
+				echo -e " $red[4]$white Apagar instaladores de pacotes"
+				echo -e " $red[5]$white Atualizar distribuição"
+				echo -e " $red[6]$white Instalar pacotes"
+				echo -e " $red[7]$white Remover pacotes"
+				echo -e " $red[8]$white Remover pacotes por completo (purge)"	
 				echo 
 				echo -ne "   $green#>$white "
 		fi		
@@ -62,7 +64,7 @@ while [ $ret -eq 1 ]
 			then
 				read op;
 		fi		
-		if [ $op != "0" ] && [ $op != "1" ] && [ $op != "2" ] && [ $op != "3" ] && [ $op != "4" ] && [ $op != "5" ] && [ $op != "6" ]  && [ $op != "7" ]
+		if [ $op != "0" ] && [ $op != "1" ] && [ $op != "2" ] && [ $op != "3" ] && [ $op != "4" ] && [ $op != "5" ] && [ $op != "6" ]  && [ $op != "7" ] && [ $op != "8" ]
 			then
 				ret=1
 			else
@@ -99,13 +101,17 @@ while [ $ret -eq 1 ]
 						val="remove"
 						v=0
 					;;
+					"8")
+						val="purge"
+						v=0																															
+					;;
 					"0")
 						exit
 					;;
 				esac
 				if [ $op != "0" ] && [ $v -eq 0 ]
 					then
-						if [ $op = "6" ] || [ $op = "7" ]
+						if [ $op = "6" ] || [ $op = "7" ] || [ $op = "8" ]
 							then
 								echo -ne " $red     pacote:$white " 
 								read pkt
@@ -124,6 +130,7 @@ while [ $ret -eq 1 ]
 						echo -ne "$green $str $blue"
 						echo -e " (Pressione <Enter> para retornar ao menu)$white"
 						read
+						ret=1
 				fi
 			fi			
 	done
