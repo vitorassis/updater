@@ -29,7 +29,7 @@ Only download and change permission by:
 
 USING:
 
-Insert $./up in your favorite shell interpreter
+Insert $ ./up in your favorite shell interpreter
 It can be used by put an paramenter with 
 the option number, like: $./up 6 for install some package
 
